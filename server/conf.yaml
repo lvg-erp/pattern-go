@@ -1,0 +1,42 @@
+# =======================
+#        LOGGER
+# =======================
+Logger:
+  # Уровень выводимых в консоль сообщений
+  # 0 - PanicLevel
+  # 1 - FatalLevel
+  # 2 - ErrorLevel
+  # 3 - WarnLevel
+  # 4 - InfoLevel
+  # 5 - DebugLevel
+  # 6 - TraceLevel
+  Level: 6
+
+# =======================
+#   WebServer settings
+# =======================
+WebServer:
+  ListenPorts:
+    Http: 8090
+    Https: 443
+
+  HttpsSettings:
+    Enabled: false
+    AdminEmail: profmail@yandex.ru
+    Domains:
+
+# ====================================
+#    Конфигурация фоновых процессов
+# ====================================
+BackGroundWorkers:
+
+  # Синхронизация данных atrucks
+  ATrucksData:
+    # Обновление при запуске сервиса
+    UpdateOnStart: false
+    # Автоматическое обновление
+    AutoUpdate:
+      # Включено
+      Enabled: false
+      # Интервал в минутах
+      IntervalMin: 240
